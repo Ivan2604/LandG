@@ -45,3 +45,4 @@ phpunit.phar
 # local databases
 /databases
 /vagrant
+readme.md
