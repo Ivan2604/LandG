@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  mariadb:
+    volumes:
+      - ./databases:/var/lib/mysql # Use bind mount
+  php:
+    volumes:
+    - ./:/var/www/html
+
+  crond:
+    volumes:
+    - ./:/var/www/html
+
+#  nginx:
+#    volumes:
+#    - ./web:/var/www/html
+
+  apache:
+    volumes:
+    - ./:/var/www/html
+
