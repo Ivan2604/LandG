@@ -5,10 +5,10 @@
 
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
-use yii\bootstrap4\Breadcrumbs;
-use yii\bootstrap4\Html;
-use yii\bootstrap4\Nav;
-use yii\bootstrap4\NavBar;
+use yii\bootstrap5\Breadcrumbs;
+use yii\bootstrap5\Html;
+use yii\bootstrap5\Nav;
+use yii\bootstrap5\NavBar;
 
 AppAsset::register($this);
 ?>
@@ -20,6 +20,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sidebars/">
     <?php $this->head() ?>
 </head>
 <body class="d-flex flex-column h-100">
@@ -36,6 +37,7 @@ AppAsset::register($this);
     ]);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => 'Library', 'url' => ['/library/index']],
         ['label' => 'About', 'url' => ['/site/about']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
     ];
