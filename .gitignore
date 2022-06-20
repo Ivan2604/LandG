@@ -33,6 +33,7 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
+/vagrant
 
 # ignore generated files
 /frontend/web/index.php
@@ -44,5 +45,9 @@ phpunit.phar
 
 # local databases
 /databases
-/vagrant
+
+# local config
 readme.md
+
+# data for development platform
+/materials

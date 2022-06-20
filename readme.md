@@ -16,3 +16,9 @@ git branch -M main
 git push -u origin main
 ```
 
+### token
+
+```
+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
+```
+

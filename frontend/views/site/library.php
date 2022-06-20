@@ -4,6 +4,7 @@
 
 $this->title = 'My Yii Application';
 ?>
+
 <!--*** History object ***-->
 
 <!--<p class="text-danger">-->
@@ -52,37 +53,36 @@ $this->title = 'My Yii Application';
     }
     #d2 {
         border: 1px dashed navy;
-        /*float: right;*/
-        /*height: 140px;*/
-        /*overflow: auto;*/
-        /*padding: 5px;*/
-        /*width: 200px;*/
+        float: right;
+        height: 140px;
+        overflow: auto;
+        padding: 5px;
+        width: 200px;
     }
 </style>
 
 <div id="d1">
-
+    <div id="d2"></div>
     <h1>Header</h1>
     <p>paragraph<br><span>Span</span></p>
-    <button onclick="getStructure()">Get structure</button>
+    <button onclick="getStructure()">Get structure
+    </button>
 </div>
-<div id="d2"></div>
 <script>
-    function getStructure(){
-        var c=document.documentElement.childNodes;
-        var msg="";
+    function getStructure() {
+        let c = document.documentElement.childNodes;
+        console.log(c);
+        let msg="";
         for(let i=0; i<c.length; ++i) {
             let d = c[i];
-            msg += (+i + 1) + ". " + d.tagName + " (" +
-                d.nodeName + ")<br>";
-            if (d.hasChildNodes()) {
-                let e = d.childNodes;
-                for (let j = 0; j < e.length; ++j) {
+            msg += (+i+1) + ". "+d.tagName+" ("+d.nodeName+")<br>";
+            if(d.hasChildNodes()) {
+                let e=d.childNodes;
+                for(let j=0; j<e.length; ++j) {
                     let f = e[j];
-                    msg += " &nbsp; " + (+j + 1) + ". " + f.tagName + " (" + f.nodeName + ")<br>";
+                    msg += " &nbsp; " + (+j+1)+". "+ f.tagName+" ("+f.nodeName+")<br>";
                 }
-                window.d2.innerHTML = msg;
-            }
         }
+        window.d2.innerHTML = msg;
     }
 </script>
