@@ -47,10 +47,9 @@ phpunit.phar
 /databases
 
 # local config
-readme.md
+config.md
 tasks/myTask.md
 
 # data for development platform
 /materials
 
-/tasks/myTast.md
