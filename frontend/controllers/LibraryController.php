@@ -10,6 +10,8 @@ use yii\web\Controller;
  */
 class LibraryController extends Controller
 {
+    public $layout = 'panel';
+
     public function actionIndex(){
         //Вернула модель
         $data = ['apple', 'ibm'];

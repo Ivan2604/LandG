@@ -42,6 +42,8 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'education/examples' => 'education/list-example',
+                'education/example/<id:\d+>' => 'education/example',
             ],
         ],
     ],

@@ -4,85 +4,50 @@
 
 $this->title = 'My Yii Application';
 ?>
-<!--*** History object ***-->
+<div class="site-index">
 
-<!--<p class="text-danger">-->
-<!--    <span class="visually-hidden">Danger: </span>-->
-<!--    This action is not reversible-->
-<!--</p>-->
-<!--<button onclick="history.back()">Back</button>-->
-<!--<button onclick="history.forward()">Forward</button>-->
-<!--<script>-->
-<!--    window.history.replaceState({'record':'0'}, "page 0", "?record=0");-->
-<!--    window.history.pushState({'record':'1'}, "page 1", "?record=1");-->
-<!--    window.history.pushState({'record':'2'}, "page 2", "?record=2");-->
-<!--    window.history.pushState({'record':'3'}, "page 3", "?record=3");-->
-<!--    window.history.back();-->
-<!--</script>-->
+    <div class="jumbotron text-center bg-transparent">
+        <h1 class="display-4">Congratulations!</h1>
 
-<!--*** IFRAMES ***-->
+        <p class="lead">You have successfully created your Yii-powered application.</p>
 
-<!--<style>-->
-<!--    iframe{-->
-<!--        border:1px solid navy;-->
-<!--        height:300px;-->
-<!--        margin:30px;-->
-<!--        width:300px;-->
-<!--    }-->
-<!--    button{-->
-<!--        margin:10px 150px;-->
-<!--    }-->
-<!--</style>-->
-<!--<iframe src="about:blank"></iframe>-->
-<!--<iframe src="about:blank"></iframe>-->
-<!--<iframe src="about:blank" name="frame3"></iframe>-->
-<!--<button onclick="window.frames[0].location='https://itstep.org'">IT Step</button>-->
-<!--<button onclick="window.frames[1].location='https://mystat.itstep.org'">Mystat</button>-->
-<!--<button onclick="window.frames.frame3.location='https://quiz.itstep.org'">Quizes</button>-->
+        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+    </div>
 
-<!--*** DOM ***-->
+    <div class="body-content">
 
-<style>
-    #d1 {
-        border: 2px solid navy;
-        height: 150px;
-        margin: 20px;
-        padding: 15px;
-        width: 400px;
-    }
-    #d2 {
-        border: 1px dashed navy;
-        /*float: right;*/
-        /*height: 140px;*/
-        /*overflow: auto;*/
-        /*padding: 5px;*/
-        /*width: 200px;*/
-    }
-</style>
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>Heading</h2>
 
-<div id="d1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.</p>
 
-    <h1>Header</h1>
-    <p>paragraph<br><span>Span</span></p>
-    <button onclick="getStructure()">Get structure</button>
+                <p><a class="btn btn-outline-secondary" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.</p>
+
+                <p><a class="btn btn-outline-secondary" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.</p>
+
+                <p><a class="btn btn-outline-secondary" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+            </div>
+        </div>
+
+    </div>
 </div>
-<div id="d2"></div>
-<script>
-    function getStructure(){
-        var c=document.documentElement.childNodes;
-        var msg="";
-        for(let i=0; i<c.length; ++i) {
-            let d = c[i];
-            msg += (+i + 1) + ". " + d.tagName + " (" +
-                d.nodeName + ")<br>";
-            if (d.hasChildNodes()) {
-                let e = d.childNodes;
-                for (let j = 0; j < e.length; ++j) {
-                    let f = e[j];
-                    msg += " &nbsp; " + (+j + 1) + ". " + f.tagName + " (" + f.nodeName + ")<br>";
-                }
-                window.d2.innerHTML = msg;
-            }
-        }
-    }
-</script>
