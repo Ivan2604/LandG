@@ -46,6 +46,7 @@ $this->title = 'Дочерние узлы';
                 }
                 window.d2.innerHTML = msg;
             }
+
         }
     }
 </script>

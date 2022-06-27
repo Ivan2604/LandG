@@ -1,4 +1,6 @@
+Options +FollowSymlinks
 RewriteEngine on
+RewriteBase /
 
 # если это папка или файл, открываем его
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -51,10 +51,8 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Education', 'url' => ['/education/index']],
-        ['label' => 'Library', 'url' => ['/library/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
+        ['label' => 'Education', 'url' => ['/education/course']],
+        ['label' => 'Library', 'url' => ['/library/default']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
@@ -105,9 +103,8 @@ AppAsset::register($this);
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
             <li class="nav-item"><?= Yii::powered() ?></li>
         </ul>
-
-    </div>
-</footer>
+    </footer>
+</div>
 
 <?php $this->endBody() ?>
 </body>

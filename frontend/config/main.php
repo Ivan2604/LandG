@@ -1,4 +1,7 @@
 <?php
+
+use yii\web\UrlNormalizer;
+
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',
@@ -8,10 +11,16 @@ $params = array_merge(
 
 return [
     'id' => 'app-frontend',
+    'name' => 'LandG',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => [
+        'log',
+        'frontend\modules\education\Bootstrap',
+    ],
     'language' => 'ru',
     'controllerNamespace' => 'frontend\controllers',
+    'modules' => require(__DIR__ . '/modules.php'),
+//    'catchAll' => ['site/offline'],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
@@ -39,11 +48,18 @@ return [
             'errorAction' => 'site/error',
         ],
         'urlManager' => [
+            'class' => 'yii\web\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => false,
+            'normalizer' => [
+                'class' => 'yii\web\UrlNormalizer',
+                'action' => UrlNormalizer::ACTION_REDIRECT_TEMPORARY, // используем временный редирект вместо постоянного
+            ],
             'rules' => [
-                'education/examples' => 'education/list-example',
-                'education/example/<id:\d+>' => 'education/example',
+                '' => 'site/index',
+                'site' => 'site/index',
+                'library' => 'library/index',
             ],
         ],
     ],
