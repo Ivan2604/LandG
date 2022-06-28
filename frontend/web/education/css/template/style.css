@@ -1,3 +1,10 @@
+body{
+    position: relative;
+    font-family:"Courier New", Courier, monospace;
+}
+p {
+    width: 700px;
+}
 ul {
     list-style-type: disc;
 }

@@ -1,10 +1,12 @@
 <?php
 
 /** @var yii\web\View $this */
+/** @var integer $id id of lesson */
 /** @var array $taskList list of tasks */
 /** @var array $dzList list of dz */
+/** @var string $lessonTitle title of lesson */
 
-$this->title = 'My Yii Application';
+$this->title = $lessonTitle;
 
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -14,7 +16,7 @@ use yii\helpers\Url;
 <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
     <img class="me-3" src="/education/images/bootstrap-logo-white.svg" alt="" width="48" height="38">
     <div class="lh-1">
-        <h1 class="h6 mb-0 text-white lh-1">Проработка лекции</h1>
+        <h1 class="h6 mb-0 text-white lh-1">Проработка лекции "<?= $this->title ?>"</h1>
         <small>изучаем javascript</small>
     </div>
 </div>
