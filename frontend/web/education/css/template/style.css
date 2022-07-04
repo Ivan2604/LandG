@@ -2,8 +2,12 @@ body{
     position: relative;
     font-family:"Courier New", Courier, monospace;
 }
+div.main {
+    width: 1080px;
+    margin: 10px auto;
+}
 p {
-    width: 700px;
+    width: 900px;
 }
 ul {
     list-style-type: disc;
